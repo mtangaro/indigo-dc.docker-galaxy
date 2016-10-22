@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+  roles:
+    - { role: indigo-dc.galaxycloud, GALAXY_ADMIN_EMAIL: "yourmail@server.com", GALAXY_ADMIN_USERNAME: "yourusername", galaxy_instance_key_pub: "paste_your_ssh_public_key_here", supervisor_manage_postgres: "True", supervisor_manage_nginx: "True", supervisor_manage_proftpd: "True" }
